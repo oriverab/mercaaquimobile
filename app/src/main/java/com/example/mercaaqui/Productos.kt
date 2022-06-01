@@ -1,10 +1,20 @@
 package com.example.mercaaqui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import com.bumptech.glide.Glide
+import org.json.JSONArray
+import org.json.JSONObject
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,7 +43,29 @@ class Productos : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        val url = "http://192.168.3.218/mercaaqui/app/Http/listaproductos.php"
+        val queue = Volley.newRequestQueue(this)
+        val tvNombre = findViewById<TextView>(R.id.tvnombre)
+        // val tvDescripcion= findViewById<TextView>(R.id.tVdescripcionp)
+        val tvPrecio =findViewById<TextView>(R.id.tvprecio)
+        val iVProducto =findViewById<ImageView>(R.id.ivimg)
+        val stringRequest = StringRequest(Request.Method.GET, url, Response.Listener { response ->
+            val jsonArray = JSONArray(response)
+            for (i in 0 until jsonArray.length()){
+                Log.w("log", jsonArray.toString())
+                val jsonObject = JSONObject(jsonArray.getString(0))
+
+                var text =jsonObject.get("nombre")
+                tvNombre.text =jsonObject.get("nombre").toString()
+                // tvDescripcion.text =jsonObject.get("descripcionP").toString()
+                tvPrecio.text =jsonObject.get("precio").toString()
+                Glide.with(this).load(jsonObject.get("img").toString()).into(iVProducto)
+            }
+        }, Response.ErrorListener { error->
+            Log.w("errorLog", error)
+        })
+        queue.add(stringRequest)
+
         return inflater.inflate(R.layout.fragment_productos, container, false)
     }
 

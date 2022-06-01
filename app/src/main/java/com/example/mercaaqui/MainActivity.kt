@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+<<<<<<< HEAD
         val url = "http://10.190.80.196/mercaaqui/app/Http/listaproductos.php"
         val queue = Volley.newRequestQueue(this)
         val tvNombre = findViewById<TextView>(R.id.tvnombre)
@@ -37,17 +38,9 @@ class MainActivity : AppCompatActivity() {
             for (i in 0 until jsonArray.length()){
                 Log.w("log", jsonArray.toString())
                 val jsonObject = JSONObject(jsonArray.getString(0))
+=======
+>>>>>>> 9236c4170a2940e528e9cd4aaec50b9f9dff2f66
 
-                var text =jsonObject.get("nombre")
-                tvNombre.text =jsonObject.get("nombre").toString()
-              // tvDescripcion.text =jsonObject.get("descripcionP").toString()
-               tvPrecio.text =jsonObject.get("precio").toString()
-                Glide.with(this).load(jsonObject.get("img").toString()).into(iVProducto)
-            }
-        },Response.ErrorListener { error->
-            Log.w("errorLog", error)
-        })
-        queue.add(stringRequest)
 
        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
