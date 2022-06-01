@@ -26,6 +26,20 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+<<<<<<< HEAD
+        val url = "http://10.190.80.196/mercaaqui/app/Http/listaproductos.php"
+        val queue = Volley.newRequestQueue(this)
+        val tvNombre = findViewById<TextView>(R.id.tvnombre)
+       // val tvDescripcion= findViewById<TextView>(R.id.tVdescripcionp)
+        val tvPrecio =findViewById<TextView>(R.id.tvprecio)
+        val iVProducto =findViewById<ImageView>(R.id.ivimg)
+        val stringRequest = StringRequest(Request.Method.GET, url, Response.Listener { response ->
+            val jsonArray =JSONArray(response)
+            for (i in 0 until jsonArray.length()){
+                Log.w("log", jsonArray.toString())
+                val jsonObject = JSONObject(jsonArray.getString(0))
+=======
+>>>>>>> 9236c4170a2940e528e9cd4aaec50b9f9dff2f66
 
 
        binding = ActivityMainBinding.inflate(layoutInflater)
