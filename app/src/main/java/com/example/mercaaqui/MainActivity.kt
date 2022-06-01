@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val url = "http://192.168.43.135/mercaaqui/app/Http/listaproductos.php"
+        val url = "http://10.190.80.196/mercaaqui/app/Http/listaproductos.php"
         val queue = Volley.newRequestQueue(this)
         val tvNombre = findViewById<TextView>(R.id.tvnombre)
        // val tvDescripcion= findViewById<TextView>(R.id.tVdescripcionp)
@@ -49,7 +49,6 @@ class MainActivity : AppCompatActivity() {
         })
         queue.add(stringRequest)
 
-...
        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
