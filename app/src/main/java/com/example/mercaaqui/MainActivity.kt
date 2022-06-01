@@ -49,8 +49,7 @@ class MainActivity : AppCompatActivity() {
         })
         queue.add(stringRequest)
 
-
-
+...
        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
