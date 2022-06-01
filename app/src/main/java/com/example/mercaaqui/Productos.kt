@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.TextView
 import com.android.volley.Request
 import com.android.volley.Response
@@ -15,6 +16,8 @@ import com.android.volley.toolbox.Volley
 import com.bumptech.glide.Glide
 import org.json.JSONArray
 import org.json.JSONObject
+import kotlinx.android.synthetic.main.fragment_productos.*
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,45 +31,50 @@ private const val ARG_PARAM2 = "param2"
  */
 class Productos : Fragment() {
     // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private lateinit var recycler: RecyclerView
+    private lateinit var viewAlpha:View
+    private lateinit var pgbar: ProgressBar
+    private lateinit var rlProductsList: RelativeLayout
+    private lateinit var productsList: ArrayList<Product>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val url = "http://192.168.3.218/mercaaqui/app/Http/listaproductos.php"
-        val queue = Volley.newRequestQueue(this)
-        val tvNombre = findViewById<TextView>(R.id.tvnombre)
-        // val tvDescripcion= findViewById<TextView>(R.id.tVdescripcionp)
-        val tvPrecio =findViewById<TextView>(R.id.tvprecio)
-        val iVProducto =findViewById<ImageView>(R.id.ivimg)
-        val stringRequest = StringRequest(Request.Method.GET, url, Response.Listener { response ->
-            val jsonArray = JSONArray(response)
-            for (i in 0 until jsonArray.length()){
-                Log.w("log", jsonArray.toString())
-                val jsonObject = JSONObject(jsonArray.getString(0))
+        val ll = inflater.inflate(R.layout.fragment_productos, container, false)
 
-                var text =jsonObject.get("nombre")
-                tvNombre.text =jsonObject.get("nombre").toString()
-                // tvDescripcion.text =jsonObject.get("descripcionP").toString()
-                tvPrecio.text =jsonObject.get("precio").toString()
-                Glide.with(this).load(jsonObject.get("img").toString()).into(iVProducto)
+        val url = "http://192.168.3.218/mercaaqui/app/Http/listaproductos.php"
+
+        val queue = Volley.newRequestQueue(this.context)
+
+        val stringRequest = StringRequest(Request.Method.GET, url, { response ->
+            val jsonArray = JSONArray(response)
+            this.productsList = ArrayList()
+            try {
+                var i = 0
+                val l = jsonArray.length()
+                while (i < l) {
+                    productsList.add(jsonArray[i] as Product)
+                    i++
+                }
+            } catch (e: JSONException) {
             }
-        }, Response.ErrorListener { error->
-            Log.w("errorLog", error)
+        }, { error ->
+            Log.w("jsonError", error)
         })
         queue.add(stringRequest)
+        this.recycler = ll.findViewById(R.id.products_recycler)
+        this.viewAlpha = ll.findViewById(R.id.view_productsList)
+        this.pgbar = ll.findViewById(R.id.pgbar_productsList)
+        this.rlProductsList = ll.findViewById(R.id.rl_ProductsList)
 
-        return inflater.inflate(R.layout.fragment_productos, container, false)
+        return ll;
     }
 
     companion object {
