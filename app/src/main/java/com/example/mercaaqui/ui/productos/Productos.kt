@@ -1,4 +1,4 @@
-package com.example.mercaaqui
+package com.example.mercaaqui.ui.productos
 
 import android.os.Bundle
 import android.util.Log
@@ -7,8 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
@@ -17,7 +19,8 @@ import com.bumptech.glide.Glide
 import org.json.JSONArray
 import org.json.JSONObject
 import kotlinx.android.synthetic.main.fragment_productos.*
-
+import com.example.mercaaqui.R
+import org.json.JSONException
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,7 +38,7 @@ class Productos : Fragment() {
     private lateinit var viewAlpha:View
     private lateinit var pgbar: ProgressBar
     private lateinit var rlProductsList: RelativeLayout
-    private lateinit var productsList: ArrayList<Product>
+    private lateinit var productsList: ArrayList<Productos>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,7 +63,7 @@ class Productos : Fragment() {
                 var i = 0
                 val l = jsonArray.length()
                 while (i < l) {
-                    productsList.add(jsonArray[i] as Product)
+                    productsList.add(jsonArray[i] as Productos)
                     i++
                 }
             } catch (e: JSONException) {

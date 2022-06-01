@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.productos.item_productos">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView android:id="@+id/ivimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/descarga"></ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView android:id="@+id/tvnombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="tarro de leche "
+                android:textSize="25dp">
+            </TextView>
+
+            <TextView android:id="@+id/tvprecio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$2500"
+                android:textSize="35dp"
+                android:textColor="@color/green">
+
+            </TextView>
+            <TextView
+                android:id="@+id/pid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="envio gratis"
+                android:textSize="30dp"
+                android:textColor="@color/green">
+
+            </TextView>
+            <TextView android:id="@+id/tvstock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="30dp"
+                android:textColor="@color/green">
+
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>
