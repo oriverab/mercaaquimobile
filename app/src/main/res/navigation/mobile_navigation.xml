@@ -26,7 +26,7 @@
     </fragment>
     <fragment
         android:id="@+id/productos"
-        android:name="com.example.mercaaqui.Productos"
+        android:name="com.example.mercaaqui.ui.productos.Productos"
         android:label="fragment_productos"
         tools:layout="@layout/fragment_productos" />
 
