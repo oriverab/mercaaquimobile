@@ -6,10 +6,20 @@
         <entry key="..\:/Users/SENA/AndroidStudioProjects/Mercaaqui2/Mercaaqui2/app/src/main/res/layout/activity_item_productos.xml" value="0.3052536231884058" />
         <entry key="..\:/Users/SENA/AndroidStudioProjects/Mercaaqui2/Mercaaqui2/app/src/main/res/layout/fragment_dashboard.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/SENA/AndroidStudioProjects/Mercaaqui2/Mercaaqui2/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/SENA/AndroidStudioProjects/Mercaaqui2/Mercaaqui2/app/src/main/res/layout/fragment_item_producto.xml" value="0.1" />
         <entry key="..\:/Users/SENA/AndroidStudioProjects/Mercaaqui2/Mercaaqui2/app/src/main/res/layout/fragment_productos.xml" value="0.1" />
+<<<<<<< HEAD
         <entry key="..\:/Users/SENA/AndroidStudioProjects/Mercaaqui2/Mercaaqui2/app/src/main/res/layout/fragment_splash.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/SENA/AndroidStudioProjects/Mercaaqui2/Mercaaqui2/app/src/main/res/layout/item_productos.xml" value="0.19746376811594202" />
         <entry key="..\:/Users/SENA/AndroidStudioProjects/Mercaaqui2/Mercaaqui2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.30462962962962964" />
+=======
+<<<<<<< HEAD
+        <entry key="..\:/Users/SENA/AndroidStudioProjects/Mercaaqui2/Mercaaqui2/app/src/main/res/layout/fragment_splash.xml" value="0.13601823708206687" />
+        <entry key="..\:/Users/SENA/AndroidStudioProjects/Mercaaqui2/Mercaaqui2/app/src/main/res/layout/item_productos.xml" value="0.16843971631205673" />
+        <entry key="..\:/Users/SENA/AndroidStudioProjects/Mercaaqui2/Mercaaqui2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+=======
+>>>>>>> 6382adc5995e4c40d0b362aec4f2a68c79ff59b3
+>>>>>>> 95e63e544369ef13cfc3a7d147cc6d73e1c100be
       </map>
     </option>
   </component>
