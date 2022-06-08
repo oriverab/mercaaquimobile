@@ -3,5 +3,6 @@ import com.example.mercaaqui.models.productos
 
 interface ProductosListener{
 
-    fun onProductosClicked(productos: productos , position: Int)
+    fun onProductosClicked(Productos: productos, position: Int)
+
     }
