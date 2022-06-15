@@ -13,29 +13,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/mercaaqui"></ImageView>
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:background="@color/silver"
-            ></View>
-    </LinearLayout>
-
-        <View
-            android:layout_width="808dp"
-            android:layout_height="43dp"
-            android:background="@color/white"></View>
         <TextView
             android:id="@+id/textDashboard"
             android:layout_width="wrap_content"

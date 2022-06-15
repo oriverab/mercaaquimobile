@@ -121,9 +121,9 @@
                 >
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/descarga"></ImageView>
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/pancito"></ImageView>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -132,7 +132,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="tarro de leche "
+                        android:text="Pan Bimbo  "
                         android:textSize="25dp">
                     </TextView>
                     <TextView
@@ -167,9 +167,9 @@
                     >
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/descarga1"></ImageView>
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/supermercados"></ImageView>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -178,7 +178,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="cubeta de huevos "
+                            android:text="salchicha viena "
                             android:textSize="20dp">
                         </TextView>
                         <TextView
