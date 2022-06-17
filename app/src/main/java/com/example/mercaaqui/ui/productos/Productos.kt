@@ -41,7 +41,7 @@ class Productos : Fragment(), ProductosListener {
     ): View? {
         val ll = inflater.inflate(R.layout.fragment_productos, container, false)
 
-        val url = "http://10.190.80.77/mercaaqui/app/Http/listaproductos.php"
+        val url = "https://mercaaqui.tk/ListaProductos"
 
         val queue = Volley.newRequestQueue(this.context)
 

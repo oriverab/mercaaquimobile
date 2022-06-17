@@ -121,7 +121,7 @@
                 >
 
                 <ImageView
-                    android:layout_width="200dp"
+                    android:layout_width="190dp"
                     android:layout_height="200dp"
                     android:src="@drawable/pancito"></ImageView>
 
@@ -167,7 +167,7 @@
                     >
 
                     <ImageView
-                        android:layout_width="200dp"
+                        android:layout_width="150dp"
                         android:layout_height="200dp"
                         android:src="@drawable/supermercados"></ImageView>
 
@@ -216,7 +216,7 @@
                     >
 
                     <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_width="190dp"
                         android:layout_height="wrap_content"
                         android:src="@drawable/descarga"></ImageView>
 
@@ -300,7 +300,9 @@
 
             </LinearLayout>
 
-
+<View
+    android:layout_width="wrap_content"
+    android:layout_height="15dp"></View>
 
 
         </LinearLayout>
