@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.productos.productodialog">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Toolbar
+            android:id="@+id/tb_detalles_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Toolbar>
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:background="@color/green">
+
+        </View>
+
+
+        <TextView
+            android:id="@+id/tituloproyecto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="proyecto 1"
+            android:textAlignment="center"
+            android:textColor="@color/green">
+
+        </TextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/green">
+
+        </View>
+
+        <ImageView
+            android:id="@+id/imageproyecto"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/images">
+
+        </ImageView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp">
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="80px"
+                android:layout_height="10pt"></View>
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_baseline_branding_watermark_24"></ImageView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cantidadprecio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="precio">
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PRECIO"
+                        android:textColor="@color/green">
+
+                    </TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="80px"
+                android:layout_height="10pt"></View>
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:src="@drawable/mercaaqui"></ImageView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/stockpk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:text="stock">
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="STOCK"
+                        android:textColor="@color/green">
+
+                    </TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="80px"
+                android:layout_height="10pt">
+
+            </View>
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_baseline_map_24"></ImageView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="- Direccion">
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="- Cra 104 # 13 C 40"
+                        android:textColor="@color/green">
+
+                    </TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="5pt"
+            android:layout_marginBottom="20dp">
+
+        </View>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Informacion adicional"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="15dp">
+
+        </TextView>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="5pt">
+
+        </View>
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="lorem"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="10dp">
+
+        </TextView>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+</FrameLayout>

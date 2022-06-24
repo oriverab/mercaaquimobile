@@ -28,6 +28,15 @@
         android:id="@+id/productos"
         android:name="com.example.mercaaqui.ui.productos.Productos"
         android:label="fragment_productos"
-        tools:layout="@layout/fragment_productos" />
+        tools:layout="@layout/fragment_productos" >
+        <action
+            android:id="@+id/action_productos_to_productodialog"
+            app:destination="@id/productodialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/productodialog"
+        android:name="com.example.mercaaqui.ui.productos.productodialog"
+        android:label="fragment_productodialog"
+        tools:layout="@layout/fragment_productodialog" />
 
 </navigation>

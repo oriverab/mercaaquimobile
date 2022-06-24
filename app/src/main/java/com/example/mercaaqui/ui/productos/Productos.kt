@@ -10,6 +10,8 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.core.os.bundleOf
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
@@ -17,6 +19,7 @@ import com.android.volley.toolbox.Volley
 import com.example.mercaaqui.R
 import com.example.mercaaqui.adapters.ProductosListener
 import com.example.mercaaqui.adapters.productosAdapter
+import com.example.mercaaqui.models.productos
 import org.json.JSONException
 import org.json.JSONArray
 import org.json.JSONObject
@@ -40,9 +43,6 @@ class Productos : Fragment(), ProductosListener {
         savedInstanceState: Bundle?
     ): View? {
         val ll = inflater.inflate(R.layout.fragment_productos, container, false)
-
-
-
 
         val url = "https://mercaaqui.tk/ListaProductos"
 
@@ -79,8 +79,10 @@ class Productos : Fragment(), ProductosListener {
         return ll;
     }
 
-    override fun onProductosClicked(Productos: JSONObject, position: Int) {
-        TODO("Not yet implemented")
+    override fun onProductosClicked(productos: JSONObject, position: Int) {
+        val bundle = bundleOf("productos" to productos.toString())
+        findNavController().navigate(R.id.productodialog, bundle)
+
     }
 }
 
